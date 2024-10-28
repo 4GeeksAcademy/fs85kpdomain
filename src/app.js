@@ -6,16 +6,15 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
   let pronoun = ["the", "our"];
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
 
-  for (let i = 0; i < 8; i++) {
-    let random1 = Math.floor(Math.random() * pronoun.length);
-    let random2 = Math.floor(Math.random() * adj.length);
-    let random3 = Math.floor(Math.random() * noun.length);
-    let randomize = pronoun[random1] + adj[random2] + noun[random3];
-    console.log(randomize + ".com");
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let a = 0; a < adj.length; a++) {
+      for (let u = 0; u < noun.length; u++) {
+        console.log(pronoun[i] + adj[a] + noun[u] + ".com");
+      }
+    }
   }
 };
